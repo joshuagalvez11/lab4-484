@@ -1,0 +1,68 @@
+body{
+    text-align: left;
+}
+
+table, tr, th{
+    text-align: left;
+    border: 2px solid;
+}
+
+#info{
+    width: 100%;
+    display: flex;
+}
+.infoEl{
+    width: 20%;
+    align-items: center;
+}
+.row{
+    display: table-row
+}
+
+
+/* #name-err{
+    background-color: darkblue;
+    color: whitesmoke;
+}
+#date-err{
+    background-color: darkorchid;
+    color: whitesmoke;
+}
+#hours-err{
+    background-color: brown;
+    color: whitesmoke;
+} */
+
+.err-false{
+    visibility: hidden;
+    display: none;
+}
+.err-true{
+    visibility: visible;
+    display: block;
+    background-color: brown;
+    color: whitesmoke;
+}
+#oldHtml{
+    visibility: hidden;
+}
+
+.bad-form{
+    background-color: blueviolet;
+}
+
+
+.linked{
+    background-color: blue;
+    color: white;
+    border-color: black;
+    border-width: 3px;
+    border: 5px solid;
+}
+.linked a{
+    color: white
+}
+.empty{
+    background-color: white;
+    color: black;
+}
