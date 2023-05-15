@@ -35,36 +35,21 @@
 
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbname);
-
     // Check connection
     if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
     }
 
-    // Prepare and execute the SQL statement to check if the email is already in the database
-    $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
+    $sql = "INSERT INTO users (email, password) VALUES ('email2@email.com', 'Pls222222')";
 
-    // Get the result of the SQL statement
-    $result = $stmt->get_result();
-
-    // If the email is already in the database, inform the user with an error message
-    if ($result->num_rows > 0) {
-        echo "Email already in use";
-        exit();
+    if ($conn->query($sql) === TRUE) {
+    echo "New record created successfully";
+    header("Location: ./html/form.html");
+    } else {
+    echo "Error: " . $sql . "<br>" . $conn->error;]
+    // header("Location: ./html/about-me.html");
+    header("Location: ./html/form.html");
     }
-    
 
-    // If the email is not in the database, add a new row to the users table
-    $stmt = $conn->prepare("INSERT INTO users (email, password) VALUES (?, ?)");
-    $stmt->bind_param("ss", $email, $passwordHash);
-    $stmt->execute();
-
-    // Close the database connection
     $conn->close();
-
-    // If the email and password match, load the form.html page
-    header("Location: ../index.html");
-    exit();
 ?>

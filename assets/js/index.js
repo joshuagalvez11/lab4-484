@@ -41,7 +41,7 @@ function registerSubmit() {
     if(val_email && val_password_match && val_password_length && val_password_chars){
         console.log('all good')
         document.body.classList.remove('bad-form')
-        window.location.replace("./assets/html/about-me.html")
+        //window.location.replace("./assets/html/about-me.html")
     }
         if(!val_email){
             console.log('bad email')
@@ -95,7 +95,7 @@ function loginSubmit() {
     if(val_email && val_password){
         console.log('all good')
         document.body.classList.remove('bad-form')
-        window.location.replace("./assets/html/about-me.html")
+        //window.location.replace("./assets/html/about-me.html")
     }
         if(!val_email){
             console.log('bad email')
