@@ -17,7 +17,7 @@
                 <tr>
                 <td class="linked"><a href="./about-me.html">About Me</a></td>
                 <td class="linked"><a href="./form.html">Post</a></td>
-                <td class="linked"><a href="./blog.html">Blog</a></td>
+                <td class="linked"><a href="./blog.php">Blog</a></td>
                 <td class="empty"><a> </a></td>
                 <td class="empty"><a> </a></td>
                 <td class="empty"><a> </a></td>
@@ -31,7 +31,9 @@
             </table>
         </nav>
 
-    <form id="form">
+    <form id="form"
+    action="../php/form.php"
+    method="post">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" value="Your Name "><br>
         <h4 class="err-false" id="name-err">First letter of names should be Uppercase</h1>

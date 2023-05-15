@@ -28,13 +28,13 @@ let myTitle = document.getElementById("my-title")
 let MyParagraph = document.getElementById("my-paragraph")
 
 
-let posts;
-if(JSON.parse(localStorage.getItem('posts')) ){
-    posts = JSON.parse(localStorage.getItem('posts')) 
-}else{
-    posts =[]
-}
-console.log(posts)
+// let posts;
+// if(JSON.parse(localStorage.getItem('posts')) ){
+//     posts = JSON.parse(localStorage.getItem('posts')) 
+// }else{
+//     posts =[]
+// }
+// console.log(posts)
 
 
 //form submit
@@ -109,8 +109,8 @@ Task Name: ${names.value}
 Date: ${date.value}
 
 ${postText.value}`;
-posts.push(post)
-localStorage.setItem("posts", JSON.stringify(posts))
+// posts.push(post)
+// localStorage.setItem("posts", JSON.stringify(posts))
     } else {
         document.body.classList.add('bad-form')
     }
