@@ -11,9 +11,9 @@
 <body>
 
     <form id="register"
-    action="php/register.php"
+    action="./php/register.php"
     method="post">    
-        <label><br>Email Pls</br></label>
+        <label><br>Email Plss</br></label>
         <input id="r_email" name="r_email" type="text" placeholder="Email@email.com">
         <h2 class="err-false" id="r_email-err">Not a valid email</h2>
         <br>
@@ -37,11 +37,11 @@
     action="php/login.php"
     method="post">
         <label><br>Email</br></label>
-        <input id="l_email" type="text" placeholder="Email@email.com">
+        <input id="l_email" name="l_email" type="text" placeholder="Email@email.com">
         <h2 class="err-false" id="l_email-err">Not a valid email</h2>
         <br>
         <label><br>Password</br></label>
-        <input id="l_pass"  type="password" placeholder="Enter Password">
+        <input id="l_pass" name="l_pass"  type="password" placeholder="Enter Password">
         <h2 class="err-false" id="l_p-err">Password must enter</h2>
         <br>
         <button type="submit" id="loginBtn">Login</button>
@@ -51,6 +51,6 @@
 </body>
 <!-- <script src="./script.js"></script> -->
 
-<script src="./assets/js/index.js"></script>
+<!-- <script src="./assets/js/index.js"></script> -->
 </html>
 

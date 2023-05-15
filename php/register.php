@@ -40,16 +40,22 @@
     die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO users (email, password) VALUES ('email2@email.com', 'Pls222222')";
+    // $sql = $conn->prepare("INSERT INTO users (email, password) VALUES ('$email', '$register_password')");
+    // //$sql->bind_param("ss", $email, $register_password);
+    // if ($conn->query($sql) === TRUE) {
+    // echo "New record created successfully";
+    // //header("Location: ./html/form.html");
+    // } else {
+    // echo "Error: " . $sql . "<br>" . $conn->error;
+    // // header("Location: ./html/about-me.html");
+    // //header("Location: ./html/form.html");
+    // }
 
-    if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-    header("Location: ./html/form.html");
-    } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;]
-    // header("Location: ./html/about-me.html");
-    header("Location: ./html/form.html");
-    }
+    $stmt = $conn->prepare("INSERT INTO users (email, password) VALUES (?, ?)");
+    $stmt->bind_param("ss", $email, $repassword);
+    $stmt->execute();
 
     $conn->close();
+
+    header("Location: ../../html/about-me.html");
 ?>

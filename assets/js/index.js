@@ -18,7 +18,7 @@ const emailRegex = new RegExp(/^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+
 const passwordRegex = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/)
 
 function registerSubmit() {
-    event.preventDefault()
+    //event.preventDefault()
     let email, p1, p2
     email = r_email.val()
     console.log(r_email.val())
@@ -41,7 +41,7 @@ function registerSubmit() {
     if(val_email && val_password_match && val_password_length && val_password_chars){
         console.log('all good')
         document.body.classList.remove('bad-form')
-        //window.location.replace("./assets/html/about-me.html")
+        //window.location.replace("./html/form.html")
     }
         if(!val_email){
             console.log('bad email')
@@ -79,7 +79,7 @@ function registerSubmit() {
 
 }
 function loginSubmit() {
-    event.preventDefault()
+    //event.preventDefault()
     let email, p1, p2
     email = l_email.val()
     console.log(l_email.val())
@@ -95,7 +95,7 @@ function loginSubmit() {
     if(val_email && val_password){
         console.log('all good')
         document.body.classList.remove('bad-form')
-        //window.location.replace("./assets/html/about-me.html")
+        //window.location.replace("./html/form.html")
     }
         if(!val_email){
             console.log('bad email')
